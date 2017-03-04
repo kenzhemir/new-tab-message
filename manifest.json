@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Stay focused",
-  "description": "Override new page tab with focus message",
+  "name": "New Tab message",
+  "description": "Override new page tab with your message",
   "version": "0.1",
 
   "incognito": "split",
