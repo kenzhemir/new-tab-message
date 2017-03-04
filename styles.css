@@ -15,4 +15,5 @@ body {
     color: #333;
     font-size: 6em;
     font-family: Helvetica, Arial, sans-serif;
+    outline: none;
 }
