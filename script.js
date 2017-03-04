@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var input = document.getElementById('task');
+    var input = document.getElementById('message');
 
     input.value = localStorage[input.name];
 
