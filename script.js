@@ -22,5 +22,5 @@ function debounce(callback, ms) {
 document.addEventListener('DOMContentLoaded', function() {
     var textField = document.getElementById('message');
     loadMessage(textField);
-    textField.addEventListener('input', debounce(storeMessage, 500));
+    textField.addEventListener('input', debounce(storeMessage, 100));
 })
