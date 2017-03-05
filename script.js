@@ -27,7 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
     loadMessage(textField);
 
     // Debounce listener to prevent exceeding chrome MAX_WRITE_OPERATIONS_PER_MINUTE for storage.sync
-    textField.addEventListener('input', debounce(storeMessage, 100));
+    // 500ms is the min delay to prevent exceeding on any possible input
+    // but closing the tab within the window of 500ms after typing will result in data loss
+    // 200ms is a compromise
+    textField.addEventListener('input', debounce(storeMessage, 200));
 
     chrome.storage.onChanged.addListener(function() {
         // If you load while the user is typing – it can potentially erase recent input,
