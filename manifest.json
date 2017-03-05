@@ -3,7 +3,7 @@
 
   "name": "New Tab message",
   "description": "Override new tab page with your message",
-  "version": "0.2",
+  "version": "0.3",
 
   "incognito": "split",
   "chrome_url_overrides": {
