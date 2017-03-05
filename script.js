@@ -1,7 +1,10 @@
 function loadMessage(textField) {
     chrome.storage.sync.get(null, function(items) {
-        var loadedMessage = items[textField.name] || 'click and edit this message';
-        textField.value = loadedMessage;
+        var msg = items[textField.name];
+        var loadedMessage = (msg === undefined)
+                            ? 'click and edit this message'
+                            : msg;
+    textField.value = loadedMessage;
     });
 }
 
