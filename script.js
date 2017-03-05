@@ -25,6 +25,8 @@ function debounce(callback, ms) {
 document.addEventListener('DOMContentLoaded', function() {
     var textField = document.getElementById('message');
     loadMessage(textField);
+
+    // Debounce listener to prevent exceeding chrome MAX_WRITE_OPERATIONS_PER_MINUTE for storage.sync
     textField.addEventListener('input', debounce(storeMessage, 100));
 
     chrome.storage.onChanged.addListener(function() {
