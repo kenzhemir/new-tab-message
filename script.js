@@ -4,7 +4,7 @@ function loadMessage(textField) {
         var loadedMessage = (msg === undefined)
                             ? 'click and edit this message'
                             : msg;
-    textField.value = loadedMessage;
+        textField.value = loadedMessage;
     });
 }
 
