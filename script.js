@@ -11,8 +11,16 @@ function storeMessage(event) {
     chrome.storage.sync.set(items)
 }
 
+function debounce(callback, ms) {
+    var id = null;
+    return function(e) {
+        clearTimeout(id)
+        id = setTimeout(callback.bind(window, e), ms);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     var textField = document.getElementById('message');
     loadMessage(textField);
-    textField.addEventListener('input', storeMessage);
+    textField.addEventListener('input', debounce(storeMessage, 500));
 })
