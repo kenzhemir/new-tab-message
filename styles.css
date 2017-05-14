@@ -1,3 +1,4 @@
+
 body {
     height: 100%;
     margin: 0;
@@ -14,4 +15,57 @@ body {
     font-size: 5em;
     font-family: Helvetica, Arial, sans-serif;
     outline: none;
+    resize: none;
+}
+
+#settingsBtn {
+    height: 50px;
+    width: 50px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-image: url("set.gif");
+    background-size: cover;
+    position: absolute;
+    right: 20;
+    bottom: 20;
+    z-index: 100;
+    cursor: pointer;
+    transition-duration: 1s;
+    transition-property: transform;
+}
+
+#settingsPanel {
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    right: 20;
+    bottom: 80;
+    z-index: 110;
+    transition-duration: 1s;
+    transition-property: height;
+}
+
+#settingsPanel > div {
+    border-radius: 10px;
+    padding: 10px;
+    margin:0;
+}
+
+#settingsPanel label {
+    display: inline-block;
+    width: 25%;
+}
+
+#fontSelect {
+  width: 70%;
+}
+
+#sizeInput {
+  width: 40px;
 }

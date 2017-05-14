@@ -5,7 +5,23 @@
   <script src="script.js"></script>
  </head>
  <body>
-   <textarea id="message" type="text" name="messageInput" spellcheck="false">
+   <textarea id="message" type="text" name="messageInput" spellcheck="false"></textarea>
+    <div id="settingsBtn"></div>
+    <div id="settingsPanel" style='height:0px;'>
+      <div>
+        <label for="fontSelect">Font:</label>
+        <select id="fontSelect">
+          <option value="Arial">Arial</option>
+          <option value="Arial Black">Arial Black</option>
+          <option value="Comic Sans MS">Comic Sans MS</option>
+          <option value="Courier New">Courier New</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Times New Roman">Times New Roman</option>
+        </select>
+        <label for="sizeInput">Size:</label>
+        <input id="sizeInput" type="number"/>em
+      </div>
+    </div>
  </body>
 </html>
-
